@@ -1,0 +1,25 @@
+{
+  "channels": [
+    {
+      "guide": "1",
+      "id": "461fba13-a6b2-49bc-96e9-6e66274ccc37",
+      "name": "NASA TV",
+      "description": "NASA Television provides live coverage of launches, spacewalks and other mission events, as well as the latest news briefings, video files, and the This Week @NASA report",
+      "iconUrl": "https://www.nasa.gov/sites/default/files/images/nasaLogo-570x450.png",
+      "urls": [
+        "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8"
+      ]
+    },
+    {
+      "guide": "2",
+      "id": "0465c86e-07fa-4a8f-a6c3-e9ac6e63e268",
+      "name": "Bloomberg (US)",
+      "description": "Bloomberg delivers business and markets news, data, analysis, and video to the world, featuring stories from Businessweek and Bloomberg News",
+      "iconUrl": "https://i1.wp.com/securityaffairs.co/wordpress/wp-content/uploads/2013/05/Bloomberg_logo.jpg",
+      "urls": [
+        "https://liveproduseast.global.ssl.fastly.net/us/Channel-USTV-AWS-virginia-1/Source-USTV-1000-1_live.m3u8",
+        "https://liveproduseast.global.ssl.fastly.net/btv/desktop/us_live.m3u8"
+      ]
+    }
+  ]
+}
