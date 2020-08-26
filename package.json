@@ -1,6 +1,6 @@
 {
   "name": "faux-tuner",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "description": "A virtual tuner card and EPG guide for online live TV sources. Designed to work with Plex Media Server's Live TV / DVR feature.",
   "main": "index.js",
   "bin": {
@@ -13,7 +13,7 @@
   },
   "repository": "https://github.com/FauxTuner/faux-tuner",
   "keywords": [],
-  "homepage": "/web",
+  "homepage": "https://fauxtuner.github.io/faux-tuner",
   "author": "fauxtuner",
   "license": "MIT",
   "dependencies": {
