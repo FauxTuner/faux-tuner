@@ -12,32 +12,27 @@ Largely inspired by (and parts shamelessy stolen from) [locast2plex](https://git
 - Redbox Live TV (coming soon)
   https://www.redbox.com/stream-free-live-tv
 
-### Requirements
-- `ffmpeg` faux-tuner uses `ffmpeg` under the hood to repackage the live feed to mpegts.
-
-  **Mac**<br />
-  ```bash
-  brew install ffmpeg
-  ```
-
-  **Linux**<br />
-  ```bash
-  sudo apt-get install ffmpeg
-  ```
-
-  **Windows**<br />
-  https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg
-
 
 ### Installation
 ```
-npm install -g faux-tuner
+npm install -g https://github.com/FauxTuner/faux-tuner.git
 ```
-> You may need to use `sudo`:<br>`sudo npm install -g faux-tuner`
+> If you get a permission error, you may need to use `sudo`:<br>`sudo npm install -g faux-tuner`
 
-### Starting
+
+### CLI Commands
+
+**Start**
 ```bash
 faux-tuner start
+```
+**Status**
+```bash
+faux-tuner status
+```
+**Stop**
+```bash
+faux-tuner stop
 ```
 
 ### Simple Server Example
@@ -64,6 +59,11 @@ app.listen(3130, () => {
 
 ```
 
+## Documentation
+Additional guides and documentation is available in our [wiki](https://github.com/FauxTuner/faux-tuner/wiki).
+
+- [Plex-Media-Server-Setup](https://github.com/FauxTuner/faux-tuner/wiki/Plex-Media-Server-Setup)
+
 ## Setting up Services
 
 First configure and enable your Live TV providers using the FauxTuner web interface. You can access these at `http://localhost:3130/web/` once your installation of Faux Tuner is up and running.
@@ -82,29 +82,3 @@ First configure and enable your Live TV providers using the FauxTuner web interf
 
 
 #### PlutoTV
-
-
-### Setting up Plex Media Server
-
-To use the Live TV and DVR features with Plex Media Server, you'll need a [Plex Pass](https://www.plex.tv/plex-pass/). For the most part the setup process is similar to any other tuner card on Plex.
-
-1. In your settings, navigate to the Live TV & DVR section and select "Set Up DVR".
-
-1. The faux tuner card should automatically appear as `FauxTuner4Plex`.
-
- <img src="images/pms-autoadd.jpg" width="640" />
-
- >Note the IP address that's displayed below the tuner card. You'll need it to setup the guide.
-
- >If the tuner doesn't appear automatically after a few seconds, you can try and connect manually. Enter the local IP address of the device running Faux Tuner, with the port `3130`
- <img src="images/pms-manual.jpg" width="640" />
-
-1. Once Plex connects to the tuner card, you should see a list of channels. If not, try scanning the channels a few times.
-
-1. Select the "Use XMLTV guide on your server" option to manually enter the guide URL. Since we're using online TV sources, we don't want to use the OTA data Plex provides via zip code.
-
- <img src="images/pms-guide.jpg" width="640" />
-
- >**Guide URL:** `http://192.168.X.X:3130/guide.xml`
-
-1. Grab the popcorn, that's it! After the guide updates, navigate to the new Live TV and DVR library and binge away!
