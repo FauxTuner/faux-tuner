@@ -19,8 +19,13 @@ npm install -g https://github.com/FauxTuner/faux-tuner.git
 ```
 > If you get a permission error, you may need to use `sudo`:<br>`sudo npm install -g faux-tuner`
 
+### Documentation
+Additional guides and documentation is available in our [wiki](https://github.com/FauxTuner/faux-tuner/wiki).
 
-### CLI Commands
+- [Plex-Media-Server-Setup](https://github.com/FauxTuner/faux-tuner/wiki/Plex-Media-Server-Setup)
+
+
+### Basic Usage
 
 **Start**
 ```bash
@@ -35,11 +40,13 @@ faux-tuner status
 faux-tuner stop
 ```
 
-### Simple Server Example
+You can also use faux-tuner in your own projects as a standalone library.
+
+#### Simple Server Example
 ```javascript
 const fauxTuner = require('faux-tuner');
 
-fauxTuner.listen(3130, () => {
+fau#xTuner.listen(3130, () => {
   console.log('Server listening at localhost:3130');
 });
 ```
@@ -58,27 +65,3 @@ app.listen(3130, () => {
 });
 
 ```
-
-## Documentation
-Additional guides and documentation is available in our [wiki](https://github.com/FauxTuner/faux-tuner/wiki).
-
-- [Plex-Media-Server-Setup](https://github.com/FauxTuner/faux-tuner/wiki/Plex-Media-Server-Setup)
-
-## Setting up Services
-
-First configure and enable your Live TV providers using the FauxTuner web interface. You can access these at `http://localhost:3130/web/` once your installation of Faux Tuner is up and running.
-
-> **Default Web UI Login:**<br>
-> Username: `admin`<br>
-> Password: `fauxtuner`<br>
-
-
-#### Locast
-1. Login to the faux-tuner web UI.
-1. Click on the Lodash secion.
-1. Enter your login credentials.
-
-> An active Locast account is required to access this service. Learn more at https://locast.org
-
-
-#### PlutoTV
